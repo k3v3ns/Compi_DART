@@ -28,3 +28,14 @@ C:\Users\kevin\Desktop\CompiladorDART_RCTR10\CompiladorDART_RCTR\CompiladorDART_
 C:\Users\kevin\Desktop\CompiladorDART_RCTR10\CompiladorDART_RCTR\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.csproj.CoreCompileInputs.cache
 C:\Users\kevin\Desktop\CompiladorDART_RCTR10\CompiladorDART_RCTR\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.exe
 C:\Users\kevin\Desktop\CompiladorDART_RCTR10\CompiladorDART_RCTR\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.pdb
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\bin\Debug\CompiladorDART_RCTR.exe.config
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\bin\Debug\CompiladorDART_RCTR.exe
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\bin\Debug\CompiladorDART_RCTR.pdb
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.csproj.AssemblyReference.cache
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.csproj.SuggestedBindingRedirects.cache
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.Form1.resources
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.Properties.Resources.resources
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.csproj.GenerateResource.cache
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.csproj.CoreCompileInputs.cache
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.exe
+C:\Users\tacos\Source\Repos\Compi_DART\CompiladorDART_RCTR\obj\Debug\CompiladorDART_RCTR.pdb

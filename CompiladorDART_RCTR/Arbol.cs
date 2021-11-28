@@ -120,14 +120,19 @@ namespace CompiladorDART_RCTR
             {
                 case -82: //if  *si*
                     return CrearArbolIF();
+
                 case -1: //asignacion
                     return CrearArbolAsignacion();
+
                 case -78: //for *por*
-                    return CrearArbolFor();         // por           
+                    return CrearArbolFor();         // por
+                                                    // 
                 case -106: // escritura*
                     return CrearNodoEscritura();    // inout print   *leer* 
+
                 case -113: // lectura*
                     return CrearNodoLectura();      // input read    *impresion*
+
                 default:
                     return new NodoArbol();
             }
@@ -361,13 +366,25 @@ namespace CompiladorDART_RCTR
         #region Crear Arbol de Escritura
         private NodoArbol CrearNodoEscritura()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var nodoArbolWrite = NuevoNodoSentencia(TipoSentencia.ESCRIBIR);
+
+            puntero += 2;
+            nodoArbolWrite.hijoCentro = CrearArbolExpresion();
+
+            return nodoArbolWrite;
         }
         #endregion
         #region Crear Arbol Lectura
         private NodoArbol CrearNodoLectura()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var nodoArbolRead = NuevoNodoExpresion(tipoExpresion.Identificador);
+
+            puntero -= 2;
+            nodoArbolRead.hijoCentro = CrearArbolExpresion();
+
+            return nodoArbolRead;
         }
 
         #endregion
