@@ -248,12 +248,20 @@ namespace CompiladorDART_RCTR
         public NodoArbol CrearArbolAsignacion()
         {
             var sentenciaAsignacion = NuevoNodoSentencia(TipoSentencia.ASIGNACION);
-            sentenciaAsignacion.lexema = miListaTokenTemporal[puntero].Lexema;
-            sentenciaAsignacion.pCode = "lda " + miListaTokenTemporal[puntero].Lexema + ";";
-            sentenciaAsignacion.pCode1 = "sto;";
-            puntero += 2;
-            sentenciaAsignacion.SoyDeTipoDato = TablaSimbolos.ObtenerTipoDato(sentenciaAsignacion.lexema, nombreClaseActiva, nombreMetodoActivo);
-            sentenciaAsignacion.hijoIzquierdo = CrearArbolExpresion();
+
+            if (!(miListaTokenTemporal[puntero+2].ValorToken == -113))
+            {
+                sentenciaAsignacion.lexema = miListaTokenTemporal[puntero].Lexema;
+                sentenciaAsignacion.pCode = "lda " + miListaTokenTemporal[puntero].Lexema + ";";
+                sentenciaAsignacion.pCode1 = "sto;";
+                puntero += 2;
+                sentenciaAsignacion.SoyDeTipoDato = TablaSimbolos.ObtenerTipoDato(sentenciaAsignacion.lexema, nombreClaseActiva, nombreMetodoActivo);
+                sentenciaAsignacion.hijoIzquierdo = CrearArbolExpresion();
+            } else
+            {
+                puntero += 2;
+                ObtenerSiguienteArbol();
+            }
 
             return sentenciaAsignacion;
 
@@ -381,7 +389,7 @@ namespace CompiladorDART_RCTR
             //throw new NotImplementedException();
             var nodoArbolRead = NuevoNodoExpresion(tipoExpresion.Identificador);
 
-            puntero -= 2;
+            //puntero -= 2;
             nodoArbolRead.hijoCentro = CrearArbolExpresion();
 
             return nodoArbolRead;
