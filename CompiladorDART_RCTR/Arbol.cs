@@ -387,11 +387,11 @@ namespace CompiladorDART_RCTR
         private NodoArbol CrearNodoLectura()
         {
             //throw new NotImplementedException();
-            var nodoArbolRead = NuevoNodoExpresion(tipoExpresion.Identificador);
+            var nodoArbolRead = NuevoNodoSentencia(TipoSentencia.LEER);
 
-            //puntero -= 2;
+            puntero -=2;
             nodoArbolRead.hijoCentro = CrearArbolExpresion();
-
+            puntero +=2; //El método del árbol lo mueve otro espacio, despues del leer
             return nodoArbolRead;
         }
 
