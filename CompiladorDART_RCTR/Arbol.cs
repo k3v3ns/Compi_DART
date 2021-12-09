@@ -368,7 +368,7 @@ namespace CompiladorDART_RCTR
             while (!(miListaTokenTemporal[puntero].ValorToken == -23))
             {
                 if (cont == 0)
-                {//Primera vuelta
+                {//Primera vuelta   //aaa
                     nodoArbolfor.hijoCentro = ObtenerSiguienteArbol();
                     puntero++;
                 }
