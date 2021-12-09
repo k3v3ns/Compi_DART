@@ -358,15 +358,27 @@ namespace CompiladorDART_RCTR
         {
             var nodoArbolfor = NuevoNodoSentencia(TipoSentencia.FOR);
             puntero += 3;
-            nodoArbolfor.hijoIzquierdo = ObtenerSiguienteArbol();
+            nodoArbolfor.hijoIzquierdo = ObtenerSiguienteArbol();    // sentencias
             puntero++;
-            nodoArbolfor.hijoCentro = CrearArbolCondicional();
-            puntero++;
-            nodoArbolfor.hijoDerecho = CrearArbolExpresion();
+            nodoArbolfor.hijoDerecho = CrearArbolCondicional();    // condicional
+            puntero += 5;
 
+            int cont = 0;
 
-
-            
+            while (!(miListaTokenTemporal[puntero].ValorToken == -23))
+            {
+                if (cont == 0)
+                {//Primera vuelta
+                    nodoArbolfor.hijoCentro = ObtenerSiguienteArbol();
+                    puntero++;
+                }
+                else
+                {//Segunda vuelta en adelante
+                    nodoArbolfor.hijoCentro = NodoHermano();
+                    puntero++;
+                }
+                cont++;
+            }
             return nodoArbolfor;
         }
 
