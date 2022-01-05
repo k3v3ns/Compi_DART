@@ -119,7 +119,7 @@ namespace CompiladorDART_RCTR
         {
             if (miArbol.hijoIzquierdo != null)
                 miArbol.tipoValorNodoHijoIzquierdo =
-                     RecorridoPostOrdenExpresiones(miArbol.hijoIzquierdo);
+                     RecorridoPostOrdenExpresiones(miArbol.hijoIzquierdo); 
 
             if (miArbol.hijoDerecho != null)
                 miArbol.tipoValorNodoHijoDerecho =

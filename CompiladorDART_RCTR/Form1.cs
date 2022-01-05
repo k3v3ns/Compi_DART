@@ -23,18 +23,23 @@ namespace CompiladorDART_RCTR
                 var objSintactico = new Sintactico(lexico.listaToken);
                 objSintactico.EjecutarSintactico(objSintactico.listaTokens);
 
-                var arbolito = new Arbol(lexico.listaToken);  //  <-------- 
-                arbolito.CrearArbolSintacticoAbstracto();
-
-
-
+            
                 List<Error> listaErroresLexico = lexico.listaErrorLexico;
                 List<Error> listaErroresSintactico = objSintactico.listaError;
 
                 List<Error> listaErrores = listaErroresLexico.Union(listaErroresSintactico).ToList();
 
 
+                if (listaErrores != null)
+                {
+                    var arbolito = new Arbol(lexico.listaToken);  //  <-------- 
+                    var arbolito2 = arbolito.CrearArbolSintacticoAbstracto();
+                    //CrearArbolSintacticoAbstracto
 
+
+                    //Llamar a la verificación de tipos
+                    VerificadorTipos verificar = new VerificadorTipos(arbolito2);
+                }
 
                 //Tablas que se muestran en el Form
                 var Lista = new BindingList<Token>(lexico.listaToken);
@@ -57,7 +62,9 @@ namespace CompiladorDART_RCTR
                 
                 var listademetodosvariables = (from x in TablaSimbolos.MetodoActivo.TablaSimbolosVariables
                                                select x.Value);
+
                 
+
                 dataGridView2.DataSource = listadeatributosGRW.ToList(); ;   // <- - - - - otra forma.
                 dataGridView5.DataSource = listademetodos.ToList();
                 dataGridView6.DataSource = listademetodosvariables.ToList();
